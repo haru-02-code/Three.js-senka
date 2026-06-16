@@ -1,0 +1,13 @@
+Three.js専科
+
+ゴール
+Three.js
+
+6/9
+
+WebGLとは
+ブラウザでGPUを使って2D/3Dグラフィックスを描画するJavaScript API
+
+Three.jsとは
+WebGLを簡単に扱うためのjavascriptライブラリ
+
