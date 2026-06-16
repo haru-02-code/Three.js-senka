@@ -2,6 +2,13 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
+// Three.js 本体
+import * as THREE from 'three';
+// 個別クラスのインポート
+import { Scene, PerspectiveCamera, WebGLRenderer } from 'three';
+// アドオン (例: OrbitControls)
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+ 
 
 document.querySelector('#app').innerHTML = `
   <div>
