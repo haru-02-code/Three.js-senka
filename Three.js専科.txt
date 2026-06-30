@@ -11,3 +11,53 @@ WebGLとは
 Three.jsとは
 WebGLを簡単に扱うためのjavascriptライブラリ
 
+6/16
+
+モニターで見る3D空間は厳密には3D空間ではなく2Dの絵と同じ
+
+レンダラーはカメラが見たものを2Dとしてモニターに表示する役割
+
+ルート
+物事の一番上位の存在という意味
+
+const は定数を定義
+定数は変わらないもの定義する
+
+camera
+PerspectiveCamera
+
+
+Mesh = Geometry + Material
+
+Geometryは形状(頂点の集まり、立方体、球など)
+Materialは表面の見た目(色・質感)
+
+Meshは二つを組み合わせた3D物体	
+
+$はコピーしないのがお約束
+
+src=ソース
+
+canvasタグとは？
+Webページ上に図形やアニメーションを描画するための領域（タグ）
+
+横X　縦Y　奥行きZ
+
+Window: innerWidth/HeightはWindowの中のページが表示されている部分
+逆にouterWidth/HeightはそのWindow全体になる
+
+6/23
+
+リアルな見た目を支える3つの要素
+
+material
+物体の表面の質感や色を決める
+
+roughness 0=つるつる 1=ざらざら。表面の粗さ
+metalness 0=非金属 1=金属。金属らしさの度合い
+
+light
+空間を照らし陰影を生み出す光源
+
+shadow
+物体が落とす陰で立体感を高める
