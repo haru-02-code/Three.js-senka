@@ -20,8 +20,10 @@
     <canvas id="canvas"></canvas>
     <!-- 公式サイトからthree.jsライブラリ持ってきている -->
     <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+    <!-- OrbitControls.js -->
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r109/examples/js/controls/OrbitControls.js"></script>
+    
     <script>
-        
 
         // シーンの作成
         const scene = new THREE.Scene();
@@ -36,6 +38,10 @@
         renderer.setSize(window.innerWidth, window.innerHeight);
         // 背景色変更
         renderer.setClearColor(0xffffff);
+
+        // カメラ操作
+        const { OrbitControls } = THREE;
+        const controls = new OrbitControls(camera, renderer.domElement);
 
         // テクスチャ
         const loader = new THREE.TextureLoader();
@@ -56,7 +62,7 @@
 
         tex3.wrapS = THREE.RepeatWrapping;
         tex3.wrapT = THREE.RepeatWrapping;
-        tex3.repeat.set(4, 4); // 4×4 タイル
+        tex3.repeat.set(6, 6); // 4×4 タイル
 
         const woodmaterial = new THREE.MeshStandardMaterial({
             map: tex3,
@@ -68,7 +74,7 @@
 
         tex2.wrapS = THREE.RepeatWrapping;
         tex2.wrapT = THREE.RepeatWrapping;
-        tex2.repeat.set(6, 3);
+        tex2.repeat.set(24, 12);
 
         // ジオメトリとマテリアルの作成
         // イチゴ
@@ -121,7 +127,7 @@
         scene.add(floor)
 
         // ライト
-        const light = new THREE.DirectionalLight(0xffffff, 1.0);
+        const light = new THREE.DirectionalLight(0xffffff, 3.0);
         light.position.set(3, 10, 0);
         scene.add(light);
 
